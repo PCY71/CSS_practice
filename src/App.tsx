@@ -1,7 +1,8 @@
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faThumbsUp, faThumbsDown, faShare, faPlus, faEllipsis, faSearch, faE } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsUp, faThumbsDown, faShare, faPlus, faEllipsis, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import {CSSProperties} from 'react';
 
 function App() {
 
@@ -10,11 +11,11 @@ function App() {
       {/* Header */}
       <header>
         <div className="logo">
-          <FontAwesomeIcon icon={faYoutube} />
+          <FontAwesomeIcon className='fa-youtube' icon={faYoutube} style={youtubeStyle}/>
           <span className="title">Youtube</span>
         </div>
         <div className="icons">
-          <FontAwesomeIcon icon={faSearch} />
+          <FontAwesomeIcon className='fa-search' icon={faSearch} />
           <FontAwesomeIcon icon={faEllipsis} />
         </div>
       </header>
@@ -36,11 +37,9 @@ function App() {
             <span className="title">
               Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 클론코딩
             </span>
-            <button className="moreBtn"></button>
+            <button className="moreBtn"><FontAwesomeIcon icon={faCaretDown}/></button>
           </div>
-          <div className="views">
-            <span className="views"> 1M vies 1 month ago</span>
-          </div>
+          <span className="views"> 1M views 1 month ago</span>
         </div>
         <div className="actions">
           <li>
@@ -124,3 +123,9 @@ function App() {
 }
 
 export default App
+
+/* typescript에서 인라인 CSS 연습용 */
+const youtubeStyle: CSSProperties = {
+  color: '#ff0000',
+  marginRight: 10,
+};

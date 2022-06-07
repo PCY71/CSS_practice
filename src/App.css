@@ -1,0 +1,117 @@
+:root{
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color:   #045fd4;
+    --red-color:    #ff0000;
+    --grey-dark-color:  #909090;
+    --grey-light-color: #e0e0e0;
+
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
+ul, li {
+    list-style: none;
+}
+
+button, button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color)
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-large);
+}
+
+header .icons .fa-search{
+    margin-right: var(--padding);
+}
+
+/* Video Player */
+.player {
+    text-align: center;
+    background-color: var(--black-color);
+
+    /* 동영상 플레이어 위치 고정으로 sticky를 고정할 때는 
+    아래 top: 0처럼 위치를 지정해줘야 고정됨 */
+    position: sticky;
+    top:0;
+}
+
+.player video {
+    /* 아이템을 반응형으로 만들때 percentage를 사용하면 좋음 */
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    /* 2줄 이상 넘어가면 ...으로 표시되도록 */
+    font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .metadata .views {
+    font-size: var(--font-small);
+    color:var(--grey-dark-color);
+}
