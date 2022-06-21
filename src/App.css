@@ -55,6 +55,10 @@ header .logo {
     font-size: var(--font-large);
 }
 
+header .logo i {
+    color: var(--red-color);
+}
+
 header .icons .fa-search{
     margin-right: var(--padding);
 }
@@ -114,4 +118,19 @@ header .icons .fa-search{
 .info .metadata .views {
     font-size: var(--font-small);
     color:var(--grey-dark-color);
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding);
+}
+
+.actions button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
 }

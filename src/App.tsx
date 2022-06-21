@@ -1,8 +1,8 @@
 import './App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faThumbsUp, faThumbsDown, faShare, faPlus, faEllipsis, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import {CSSProperties} from 'react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+// import { faThumbsUp, faThumbsDown, faShare, faPlus, faEllipsis, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+// import {CSSProperties} from 'react';
 
 function App() {
 
@@ -11,12 +11,15 @@ function App() {
       {/* Header */}
       <header>
         <div className="logo">
-          <FontAwesomeIcon className='fa-youtube' icon={faYoutube} style={youtubeStyle}/>
+          <i className="fab fa-youtube"/>
+          {/* <FontAwesomeIcon className='fa-youtube' icon={faYoutube} style={youtubeStyle}/> */}
           <span className="title">Youtube</span>
         </div>
         <div className="icons">
-          <FontAwesomeIcon className='fa-search' icon={faSearch} />
-          <FontAwesomeIcon icon={faEllipsis} />
+          <i className='fas fa-search'/>
+          <i className='fas fa-ellipsis-v'/>
+          {/* <FontAwesomeIcon className='fa-search' icon={faSearch} />
+          <FontAwesomeIcon icon={faEllipsis} /> */}
         </div>
       </header>
 
@@ -37,32 +40,37 @@ function App() {
             <span className="title">
               Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 클론코딩
             </span>
-            <button className="moreBtn"><FontAwesomeIcon icon={faCaretDown}/></button>
+            <i className='fas fa-caret-down'/>
+            {/* <button className="moreBtn"><FontAwesomeIcon icon={faCaretDown}/></button> */}
           </div>
           <span className="views"> 1M views 1 month ago</span>
         </div>
         <div className="actions">
           <li>
             <button>
-              <FontAwesomeIcon icon={faThumbsUp} />
+              <i className='fas fa-thumbs-up'/>
+              {/* <FontAwesomeIcon icon={faThumbsUp} style={iconButton}/> */}
               <span>1K</span>
             </button>
           </li>
           <li>
             <button>
-              <FontAwesomeIcon icon={faThumbsDown} />
+              <i className='fas fa-thumbs-down'/>
+              {/* <FontAwesomeIcon icon={faThumbsDown} style={iconButton}/> */}
               <span>0</span>
             </button>
           </li>
           <li>
             <button>
-              <FontAwesomeIcon icon={faShare} />
+              <i className='fas fa-share'/>
+              {/* <FontAwesomeIcon icon={faShare} style={iconButton}/> */}
               <span>share</span>
             </button>
           </li>
           <li>
             <button>
-              <FontAwesomeIcon icon={faPlus} />
+              <i className='fa-plus'/>
+              {/* <FontAwesomeIcon icon={faPlus} style={iconButton}/> */}
               <span>Save</span>
             </button>
           </li>
@@ -95,7 +103,10 @@ function App() {
               <span className="channel">CY's Study Room</span>
               <span className="views">1M views</span>
             </div>
-            <button className="moreBtn"><FontAwesomeIcon icon={faEllipsis}/></button>
+            <button className="moreBtn">
+              <i className='fas fa-ellipsis-v'/>
+              {/* <FontAwesomeIcon icon={faEllipsis}/> */}
+              </button>
           </li>
           <li className="item">
             <img src="" alt="img2" />
@@ -104,7 +115,10 @@ function App() {
             </span>
             <span className="channel">CY's Study Room</span>
             <span className="views">82K views</span>
-            <button className="moreBtn"><FontAwesomeIcon icon={faEllipsis}/></button>
+            <button className="moreBtn">
+              <i className='fas fa-ellipsis-v'/>
+              {/* <FontAwesomeIcon icon={faEllipsis}/> */}
+            </button>
           </li>
           <li className="item">
             <img src="" alt="img3" />
@@ -113,7 +127,10 @@ function App() {
             </span>
             <span className="channel">CY's Study Room</span>
             <span className="views">82K views</span>
-            <button className="moreBtn"><FontAwesomeIcon icon={faEllipsis}/></button>
+            <button className="moreBtn">
+              <i className='fas fa-ellipsis-v'/>  
+              {/* <FontAwesomeIcon icon={faEllipsis}/> */}
+            </button>
 
           </li>
         </ul>
@@ -124,8 +141,12 @@ function App() {
 
 export default App
 
-/* typescript에서 인라인 CSS 연습용 */
+/* typescript에서 인라인 CSS 연습용 
+<FontAwesomeIcon className='fa-youtube' icon={faYoutube} style={youtubeStyle}/> 
+이런식으로 넣기
+
 const youtubeStyle: CSSProperties = {
   color: '#ff0000',
   marginRight: 10,
 };
+*/
