@@ -10,6 +10,7 @@
     /* Size */
     --padding: 12px;
     --avatar-size: 36px;
+    --icon-size: 16px;
 
     /* Font Size */
     --font-large: 18px;
@@ -121,16 +122,67 @@ header .icons .fa-search{
 }
 
 /* Action Buttons */
-.actions {
+.info .actions {
     display: flex;
     justify-content: space-around;
     margin: var(--padding);
 }
 
-.actions button {
+.info .actions button {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: var(--font-small);
     color: var(--grey-dark-color);
+}
+
+.info .actions button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding)/2);
+    font-size: var(--icon-size);
+}
+
+.info .actions button.active {
+    color: var(--blue-color);
+}
+
+/* Channel Description */
+.info .channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+    padding: var(--padding);
+}
+
+.info .channel .metadata {
+    display: flex;
+}
+
+.info .channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+} 
+
+.info .channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info .channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.info .channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .channel .subscribe {
+    /* 글자를 모두 대문자로 표시 */
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
 }

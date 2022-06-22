@@ -47,7 +47,7 @@ function App() {
         </div>
         <div className="actions">
           <li>
-            <button>
+            <button className='active'>
               <i className='fas fa-thumbs-up'/>
               {/* <FontAwesomeIcon icon={faThumbsUp} style={iconButton}/> */}
               <span>1K</span>
@@ -69,7 +69,7 @@ function App() {
           </li>
           <li>
             <button>
-              <i className='fa-plus'/>
+              <i className='fas fa-plus'/>
               {/* <FontAwesomeIcon icon={faPlus} style={iconButton}/> */}
               <span>Save</span>
             </button>
@@ -79,6 +79,7 @@ function App() {
         {/* Channel Description */}
         <div className="channel">
           <div className="metadata">
+            <img src="img/cy.png" alt="profile"/>
             <div className="info">
               <span className="name">
                 CY's Study Room
